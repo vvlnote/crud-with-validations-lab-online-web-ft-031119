@@ -9,9 +9,9 @@ class SongsController < ApplicationController
   end
   
   def create
-    binding.pry
+   
     @song = Song.create(song_params)
-    binding.pry
+   
     if @song.valid? 
       redirect_to song_path(@song)
     else
